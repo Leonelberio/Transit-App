@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include transit_app *.css
+recursive-include transit_app *.csv
+recursive-include transit_app *.html
+recursive-include transit_app *.ico
+recursive-include transit_app *.js
+recursive-include transit_app *.json
+recursive-include transit_app *.md
+recursive-include transit_app *.png
+recursive-include transit_app *.py
+recursive-include transit_app *.svg
+recursive-include transit_app *.txt
+recursive-exclude transit_app *.pyc
