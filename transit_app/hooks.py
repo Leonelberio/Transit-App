@@ -166,6 +166,8 @@ user_data_fields = [
 	}
 ]
 
+fixtures = ["Booking"]
+
 # Authentication and authorization
 # --------------------------------
 

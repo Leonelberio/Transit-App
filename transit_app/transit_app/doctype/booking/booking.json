@@ -1,0 +1,238 @@
+{
+ "actions": [],
+ "autoname": "format:{bl_number}-{customer_name}",
+ "creation": "2021-10-05 01:10:55.817412",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "customer_name",
+  "section_break_3",
+  "company_name",
+  "column_break_3",
+  "bl_number",
+  "column_break_7",
+  "date_du_booking",
+  "section_break_9",
+  "type_marchandises",
+  "section_break_5",
+  "twenty_feet",
+  "twenty_feet_quantity",
+  "frais_certificat_danalyse_20pieds",
+  "column_break_15",
+  "fourty_feet",
+  "fourty_feet_quantity",
+  "frais_unitaire_de_certificat_danalyse_40pieds",
+  "emballages_section",
+  "quantity_of_dressing",
+  "price_of_dressing",
+  "column_break_17",
+  "quantity_of_drybag",
+  "price_of_drybag",
+  "camions_section",
+  "lorries",
+  "modified_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Nom du client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nom de la compagnie",
+   "options": "Compagnie de Navire",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bl_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Numero B/L",
+   "reqd": 1
+  },
+  {
+   "columns": 11,
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Conteneurs"
+  },
+  {
+   "fieldname": "emballages_section",
+   "fieldtype": "Section Break",
+   "label": "Emballages"
+  },
+  {
+   "fieldname": "quantity_of_dressing",
+   "fieldtype": "Data",
+   "label": "Nombre de Dressing"
+  },
+  {
+   "fieldname": "price_of_dressing",
+   "fieldtype": "Float",
+   "label": "Prix Unitaire de Dressing"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity_of_drybag",
+   "fieldtype": "Data",
+   "label": "Nombre de Dry Bag"
+  },
+  {
+   "fieldname": "price_of_drybag",
+   "fieldtype": "Float",
+   "label": "Prix Unitaire de Dry Bag"
+  },
+  {
+   "fieldname": "camions_section",
+   "fieldtype": "Section Break",
+   "label": "Camions"
+  },
+  {
+   "columns": 7,
+   "fieldname": "lorries",
+   "fieldtype": "Table",
+   "options": "Type Camion",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_du_booking",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Date du booking",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Marchandises"
+  },
+  {
+   "fieldname": "modified_from",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Modifi\u00e9 par",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "twenty_feet",
+   "fieldtype": "Check",
+   "label": "Conteneurs 20 pieds"
+  },
+  {
+   "depends_on": "eval:doc.twenty_feet;",
+   "fieldname": "twenty_feet_quantity",
+   "fieldtype": "Data",
+   "label": "Nombre de conteneurs 20 pieds",
+   "mandatory_depends_on": "eval:doc.twenty_feet;"
+  },
+  {
+   "default": "0",
+   "fieldname": "fourty_feet",
+   "fieldtype": "Check",
+   "label": "Conteneurs 40 pieds"
+  },
+  {
+   "depends_on": "eval:doc.fourty_feet;",
+   "fieldname": "fourty_feet_quantity",
+   "fieldtype": "Data",
+   "label": "Nombre de conteneurs 40 pieds",
+   "mandatory_depends_on": "eval:doc.fourty_feet;"
+  },
+  {
+   "fieldname": "type_marchandises",
+   "fieldtype": "Table",
+   "options": "Type Marchandise"
+  },
+  {
+   "depends_on": "eval:doc.twenty_feet;",
+   "fieldname": "frais_certificat_danalyse_20pieds",
+   "fieldtype": "Float",
+   "label": "Frais certificat d'analyse (20pieds)",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.fourty_feet;",
+   "fieldname": "frais_unitaire_de_certificat_danalyse_40pieds",
+   "fieldtype": "Data",
+   "label": "Frais unitaire de certificat d'analyse (40pieds)",
+   "permlevel": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "booking"
+  }
+ ],
+ "modified": "2021-10-21 12:24:58.602172",
+ "modified_by": "Administrator",
+ "module": "Transit App",
+ "name": "Booking",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

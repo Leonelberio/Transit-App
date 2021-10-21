@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "autoname": "format:IMP-{#####}-{nom_client}",
+ "creation": "2021-10-10 06:57:26.463793",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "nom_client",
+  "column_break_3",
+  "company_name",
+  "section_break_3",
+  "date_enregistrement",
+  "section_break_7",
+  "date_arrivee",
+  "column_break_9",
+  "date_reception_telex",
+  "ecart_reception_telex",
+  "telex_alert",
+  "frais_suppl\u00e9mentaire_li\u00e9s_aux_retards_section",
+  "surestarie",
+  "column_break_15",
+  "frais_stationnement",
+  "column_break_17",
+  "frais_de_d\u00e9tention",
+  "status",
+  "modified_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nom_client",
+   "fieldtype": "Link",
+   "label": "Nom du client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_arrivee",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date d'arriv\u00e9e du navire",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_reception_telex",
+   "fieldtype": "Date",
+   "label": "Date de reception du Telex",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_enregistrement",
+   "fieldtype": "Date",
+   "label": "Date d'enr\u00e9gistrement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "frais_suppl\u00e9mentaire_li\u00e9s_aux_retards_section",
+   "fieldtype": "Section Break",
+   "label": "Frais suppl\u00e9mentaire li\u00e9s aux retards"
+  },
+  {
+   "description": "La surestarie est un frais li\u00e9 au retard de reception du Telex",
+   "fieldname": "surestarie",
+   "fieldtype": "Float",
+   "label": "Surestarie",
+   "mandatory_depends_on": "date_reception_telex > date_arrivee;"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Ce frais est g\u00e9n\u00e9ralement li\u00e9 au d\u00e9passement du temps de stationnement",
+   "fieldname": "frais_stationnement",
+   "fieldtype": "Float",
+   "label": "Frais de stationnement"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "frais_de_d\u00e9tention",
+   "fieldtype": "Float",
+   "label": "Frais de d\u00e9tention"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_from",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Modifi\u00e9 par",
+   "read_only": 1
+  },
+  {
+   "fieldname": "telex_alert",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "label": "Telex Alert",
+   "options": "<div class=\"alert alert-danger\" role=\"alert\">{{frm.doc.date_reception_telex}}</div>"
+  },
+  {
+   "fieldname": "ecart_reception_telex",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Ecart"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nom de la compagnie",
+   "options": "Compagnie de Navire",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "booking"
+  }
+ ],
+ "modified": "2021-10-21 12:53:18.499579",
+ "modified_by": "Administrator",
+ "module": "Transit App",
+ "name": "Import Transit",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-10-20 20:36:10.783293",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "marchandise",
+  "nombre_sac",
+  "poids_sac",
+  "declaration_gmo"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre_sac",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Nombre de sac",
+   "reqd": 1
+  },
+  {
+   "fieldname": "poids_sac",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Poids total des sacs (Kg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marchandise",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Marchandise",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "declaration_gmo",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "D\u00e9claration GMO"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_virtual": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-10-21 08:12:46.007347",
+ "modified_by": "Administrator",
+ "module": "Transit App",
+ "name": "Type Marchandise",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
