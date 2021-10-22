@@ -25,7 +25,6 @@ frappe.ui.form.on('Import Transit', {
 				console.log("Vous avez la chance");
 				// frm.doc.ecart_reception_telex = "";
 			// cur_frm.set_value("ecart_reception_telex", "Vous avez la chance");
-
 			}
 		
 	 }
