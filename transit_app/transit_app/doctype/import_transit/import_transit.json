@@ -7,7 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_1",
-  "nom_client",
+  "customer",
   "column_break_3",
   "company_name",
   "section_break_3",
@@ -15,6 +15,9 @@
   "section_break_7",
   "date_arrivee",
   "column_break_9",
+  "select_10",
+  "date_estim\u00e9e_du_telex",
+  "column_break_13",
   "date_reception_telex",
   "ecart_reception_telex",
   "telex_alert",
@@ -31,13 +34,6 @@
   {
    "fieldname": "section_break_1",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "nom_client",
-   "fieldtype": "Link",
-   "label": "Nom du client",
-   "options": "Customer",
-   "reqd": 1
   },
   {
    "fieldname": "section_break_3",
@@ -141,6 +137,29 @@
    "label": "Nom de la compagnie",
    "options": "Compagnie de Navire",
    "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Nom du client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "select_10",
+   "fieldtype": "Select",
+   "options": "D\u00e9p\u00f4tage\nIterland"
+  },
+  {
+   "default": "hello",
+   "fieldname": "date_estim\u00e9e_du_telex",
+   "fieldtype": "Data",
+   "label": "Date estim\u00e9e du Telex",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -150,7 +169,7 @@
    "link_fieldname": "booking"
   }
  ],
- "modified": "2021-10-21 12:53:18.499579",
+ "modified": "2021-10-22 20:14:02.991632",
  "modified_by": "Administrator",
  "module": "Transit App",
  "name": "Import Transit",

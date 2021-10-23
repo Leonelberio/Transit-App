@@ -7,7 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_1",
-  "customer_name",
+  "customer",
   "section_break_3",
   "company_name",
   "column_break_3",
@@ -35,14 +35,6 @@
   "modified_from"
  ],
  "fields": [
-  {
-   "bold": 1,
-   "fieldname": "customer_name",
-   "fieldtype": "Link",
-   "label": "Nom du client",
-   "options": "Customer",
-   "reqd": 1
-  },
   {
    "fieldname": "company_name",
    "fieldtype": "Link",
@@ -190,6 +182,14 @@
    "fieldtype": "Data",
    "label": "Frais unitaire de certificat d'analyse (40pieds)",
    "permlevel": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Nom du client",
+   "options": "Customer",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -199,7 +199,7 @@
    "link_fieldname": "booking"
   }
  ],
- "modified": "2021-10-21 12:24:58.602172",
+ "modified": "2021-10-22 19:54:55.477178",
  "modified_by": "Administrator",
  "module": "Transit App",
  "name": "Booking",

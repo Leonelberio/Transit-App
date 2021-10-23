@@ -1,0 +1,49 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Compagnie",
+   "width": 0
+  },
+  {
+   "fieldname": "bl_number",
+   "fieldtype": "Data",
+   "label": "B/L",
+   "width": 0
+  }
+ ],
+ "creation": "2021-10-11 20:33:56.854862",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Compagnie",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "modified": "2021-10-23 04:08:28.889099",
+ "modified_by": "Administrator",
+ "module": "Transit App",
+ "name": "Rapport Booking",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Booking",
+ "reference_report": "",
+ "report_name": "Rapport Booking",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
