@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:IMP-{#####}-{nom_client}",
+ "autoname": "format:IMP-{#####}-{customer}",
  "creation": "2021-10-10 06:57:26.463793",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -58,6 +58,7 @@
   {
    "fieldname": "date_reception_telex",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date de reception du Telex",
    "reqd": 1
   },
@@ -141,6 +142,7 @@
   {
    "fieldname": "customer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Nom du client",
    "options": "Customer",
    "reqd": 1
@@ -169,7 +171,7 @@
    "link_fieldname": "booking"
   }
  ],
- "modified": "2021-10-22 20:14:02.991632",
+ "modified": "2021-10-23 08:19:41.097646",
  "modified_by": "Administrator",
  "module": "Transit App",
  "name": "Import Transit",

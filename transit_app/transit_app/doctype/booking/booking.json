@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:{bl_number}-{customer_name}",
+ "autoname": "format:{bl_number}-{customer}",
  "creation": "2021-10-05 01:10:55.817412",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -39,6 +39,7 @@
    "fieldname": "company_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Nom de la compagnie",
    "options": "Compagnie de Navire",
    "reqd": 1
@@ -47,6 +48,7 @@
    "fieldname": "bl_number",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Numero B/L",
    "reqd": 1
   },
@@ -187,6 +189,7 @@
    "bold": 1,
    "fieldname": "customer",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Nom du client",
    "options": "Customer",
    "reqd": 1
@@ -199,7 +202,7 @@
    "link_fieldname": "booking"
   }
  ],
- "modified": "2021-10-22 19:54:55.477178",
+ "modified": "2021-10-23 08:19:49.569137",
  "modified_by": "Administrator",
  "module": "Transit App",
  "name": "Booking",
